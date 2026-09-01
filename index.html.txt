@@ -1,0 +1,140 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy Kenmod</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://cdn.phototourl.com/free/2026-08-31-1f2667df-180a-460a-8f48-c87576d65644.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 15px 20px;
+            overflow: hidden;
+        }
+
+        header {
+            width: 100%;
+            max-width: 500px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            font-size: 13px;
+            color: #d1d1d1;
+        }
+
+        .main-content {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: auto 0;
+        }
+
+        .brand-title {
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .slogan {
+            font-size: 12px;
+            font-weight: 500;
+            color: #e0e0e0;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .btn {
+            background-color: #121212;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 12px 18px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #222222;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .scroll-down {
+            text-align: center;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #a0a0a0;
+        }
+
+        .scroll-down span {
+            display: block;
+            font-size: 11px;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        PROXY KENMOD
+    </header>
+
+    <div class="main-content">
+        <div>
+            <h1 class="brand-title">PROXY<br>KENMOD</h1>
+        </div>
+        
+        <p class="slogan">Hệ thống PROXY KENMOD an toàn & bảo mật cao</p>
+
+        <div class="btn-container">
+            <a href="https://link4m.org/fyeDb7z" target="_blank" class="btn">
+                <span>GET KEY</span>
+                <span>↗</span>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1urfXzHHAtKTcyHG2E1Z-DXVjGt9hV-Oq/view?usp=drivesdk" target="_blank" class="btn">
+                <span>TẢI FILE IPA [1.0.0]</span>
+                <span>↓</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="scroll-down">
+        SCROLL VIEW
+        <span>↓</span>
+    </div>
+
+</body>
+</html>
+p
