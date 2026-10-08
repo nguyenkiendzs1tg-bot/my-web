@@ -1,0 +1,772 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KENMOD OFFICIAL - Cổng Tải Hack & Lấy Key</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0b0d14;
+            --card-bg: rgba(11, 13, 20, 0.55);
+            --card-border: rgba(255, 255, 255, 0.15);
+            --primary-blue: #3b82f6;
+            --primary-glow: rgba(59, 130, 246, 0.4);
+            --text-main: #ffffff;
+            --text-muted: #cbd5e1;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-orange: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                url('https://cdn.phototourl.com/member/2026-10-08-06bfef5d-c674-41ef-9116-cdcb57a0a023.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 20px 12px 60px 12px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hiệu ứng tuyết rơi */
+        #snowflakeContainer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: #ffffff;
+            user-select: none;
+            pointer-events: none;
+            animation-name: fall, shake;
+            animation-duration: 10s, 3s;
+            animation-timing-function: linear, ease-in-out;
+            animation-iteration-count: infinite, infinite;
+            animation-play-state: running, running;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+        }
+
+        @keyframes fall {
+            0% { top: -10%; }
+            100% { top: 100%; }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(80px); }
+        }
+
+        /* Profile Header */
+        .profile-header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            width: 88px;
+            height: 88px;
+            margin-bottom: 12px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #a855f7, #3b82f6);
+            padding: 3px;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .title-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
+        .title-wrapper h1 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .verified-badge {
+            color: #3b82f6;
+            font-size: 1.1rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));
+        }
+
+        .subtitle {
+            font-size: 0.88rem;
+            color: #ffffff;
+            line-height: 1.4;
+            max-width: 90%;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+            font-weight: 500;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(11, 13, 20, 0.6);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #34d399;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #10b981;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Alert Box */
+        .alert-box {
+            background: rgba(11, 13, 20, 0.6);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            border-radius: 14px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.83rem;
+            color: #fcd34d;
+            line-height: 1.4;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .alert-box i {
+            font-size: 1.1rem;
+            margin-top: 2px;
+            color: var(--accent-orange);
+        }
+
+        /* Search Bar */
+        .search-box {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 16px 12px 42px;
+            background: rgba(11, 13, 20, 0.6);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            color: var(--text-main);
+            font-size: 0.88rem;
+            outline: none;
+            backdrop-filter: blur(4px);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-box input::placeholder {
+            color: #94a3b8;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-blue);
+            background: rgba(11, 13, 20, 0.8);
+            box-shadow: 0 0 12px var(--primary-glow);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Section Styling */
+        .section-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0 4px;
+        }
+
+        .section-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        .section-desc {
+            font-size: 0.75rem;
+            color: #e2e8f0;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Item Cards */
+        .item-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 14px;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .item-card:active {
+            transform: scale(0.99);
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon-box {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .icon-download {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .icon-key {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .icon-cart {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .icon-telegram {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .icon-zalo {
+            background: rgba(14, 165, 233, 0.2);
+            color: #38bdf8;
+            border: 1px solid rgba(14, 165, 233, 0.3);
+        }
+
+        .card-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card-title {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-tag-row {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .card-tag {
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .tag-red {
+            background: rgba(239, 68, 68, 0.25);
+            color: #f87171;
+        }
+
+        .tag-green {
+            background: rgba(16, 185, 129, 0.25);
+            color: #34d399;
+        }
+
+        .tag-orange {
+            background: rgba(245, 158, 11, 0.25);
+            color: #fbbf24;
+        }
+
+        .tag-blue {
+            background: rgba(59, 130, 246, 0.25);
+            color: #60a5fa;
+        }
+
+        .card-desc {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            line-height: 1.35;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 2px;
+        }
+
+        .btn-action {
+            flex: 1;
+            padding: 9px 12px;
+            border-radius: 10px;
+            border: 1px solid var(--card-border);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-action:hover, .btn-action:active {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-icon-only {
+            width: 40px;
+            flex: 0 0 auto;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: rgba(17, 24, 39, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 10000;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            font-size: 0.72rem;
+            color: #ffffff;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container hiệu ứng tuyết rơi -->
+    <div id="snowflakeContainer"></div>
+
+    <div class="container">
+        
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="avatar-wrapper">
+                <div class="avatar">
+                    <img src="https://cdn.phototourl.com/member/2026-10-08-112ddef8-efdc-48bb-bb9b-efe186e4fb0e.jpg" alt="Avatar">
+                </div>
+            </div>
+            <div class="title-wrapper">
+                <h1>KENMODGAME</h1>
+                <i class="fa-solid fa-circle-check verified-badge"></i>
+            </div>
+            <p class="subtitle">⚡ Cổng Tải Hack Miễn Phí & Hệ Thống Lấy Key Tự Động ⚡</p>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                Hệ thống đang hoạt động bình thường
+            </div>
+        </div>
+
+        <!-- Alert Notification Box -->
+        <div class="alert-box">
+            <i class="fa-solid fa-bell"></i>
+            <div>
+                <strong>📌 Lưu ý:</strong> Vui lòng đọc kỹ hướng dẫn và lấy đúng Key chính hoặc Key phụ để sử dụng.
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Tìm kiếm nhanh link (tải hack, key 24h, mua key, telegram,...">
+        </div>
+
+        <!-- SECTION 1: TẢI XUỐNG ỨNG DỤNG -->
+        <div class="section-group">
+            <div class="section-header">
+                <span class="section-title"><i class="fa-solid fa-rocket"></i> TẢI XUỐNG ỨNG DỤNG</span>
+                <span class="section-desc">Phiên bản mới nhất, tối ưu an toàn & hoàn toàn miễn phí</span>
+            </div>
+
+            <div class="item-card" data-title="LINK TẢI HACK MIỄN PHÍ FREE UPDATE">
+                <div class="card-top">
+                    <div class="icon-box icon-download">
+                        <i class="fa-solid fa-download"></i>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title">LINK TẢI HACK MIỄN PHÍ</div>
+                        <div class="card-tag-row">
+                            <span class="card-tag tag-red">FREE / UPDATE</span>
+                        </div>
+                        <div class="card-desc">Tải xuống trực tiếp bản update mới nhất không giới hạn</div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-action btn-icon-only" onclick="copyToClipboard('https://earnalix.club/download/', 'Đã sao chép link tải!')">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                    <a href="https://earnalix.club/download/" target="_blank" class="btn-action">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: HỆ THỐNG LẤY KEY -->
+        <div class="section-group">
+            <div class="section-header">
+                <span class="section-title"><i class="fa-solid fa-key"></i> HỆ THỐNG LẤY KEY KÍCH HOẠT</span>
+                <span class="section-desc">Vượt link đơn giản - nhận key sử dụng ngay lập tức</span>
+            </div>
+
+            <div class="item-card" data-title="LINK LẤY KEY CHÍNH (1 LINK VƯỢT)">
+                <div class="card-top">
+                    <div class="icon-box icon-key">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title">LINK LẤY KEY CHÍNH (1 LINK)</div>
+                        <div class="card-tag-row">
+                            <span class="card-tag tag-green">★ KHUYÊN DÙNG</span>
+                        </div>
+                        <div class="card-desc">1 link vượt siêu nhanh - Sử dụng liên tục 24 tiếng</div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-action btn-icon-only" onclick="copyToClipboard('https://tung.bet/GETKEY/nguyenkien', 'Đã sao chép link lấy Key!')">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                    <a href="https://tung.bet/GETKEY/nguyenkien" target="_blank" class="btn-action">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: HỆ THỐNG MUA KEY (MỚI THÊM) -->
+        <div class="section-group">
+            <div class="section-header">
+                <span class="section-title"><i class="fa-solid fa-cart-shopping"></i> HỆ THỐNG MUA KEY TỰ ĐỘNG</span>
+                <span class="section-desc">Mua key VIP không quảng cáo - Giao dịch 24/7 tự động</span>
+            </div>
+
+            <div class="item-card" data-title="SHOP MUA KEY VIP TỰ ĐỘNG KENMODSHOP SHOP KEY">
+                <div class="card-top">
+                    <div class="icon-box icon-cart">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title">SHOP MUA KEY VIP TỰ ĐỘNG</div>
+                        <div class="card-tag-row">
+                            <span class="card-tag tag-orange">VIP / TỰ ĐỘNG 24/7</span>
+                        </div>
+                        <div class="card-desc">Mua key VIP nhanh chóng, không vượt link, kích hoạt ngay</div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-action btn-icon-only" onclick="copyToClipboard('https://kenmodshop.site', 'Đã sao chép link Shop Mua Key!')">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                    <a href="https://kenmodshop.site" target="_blank" class="btn-action">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4: KÊNH CỘNG ĐỒNG -->
+        <div class="section-group">
+            <div class="section-header">
+                <span class="section-title"><i class="fa-solid fa-comments"></i> KÊNH CỘNG ĐỒNG & HỖ TRỢ</span>
+                <span class="section-desc">Tham gia để nhận thông báo, cập nhật mới & giải đáp thắc mắc</span>
+            </div>
+
+            <!-- Card Item Telegram -->
+            <div class="item-card" data-title="Kênh Telegram Chính Thức TELEGRAM">
+                <div class="card-top">
+                    <div class="icon-box icon-telegram">
+                        <i class="fa-brands fa-telegram"></i>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title">Kênh Telegram Chính Thức</div>
+                        <div class="card-tag-row">
+                            <span class="card-tag tag-blue">TELEGRAM</span>
+                        </div>
+                        <div class="card-desc">Nhận thông báo cập nhật mới nhất và file tải nhanh</div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-action btn-icon-only" onclick="copyToClipboard('https://t.me/nvkmodgame', 'Đã sao chép link Telegram!')">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                    <a href="https://t.me/nvkmodgame" target="_blank" class="btn-action">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card Item Zalo -->
+            <div class="item-card" data-title="Nhóm Zalo Cộng Đồng ZALO GROUP">
+                <div class="card-top">
+                    <div class="icon-box icon-zalo">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title">Nhóm Zalo Cộng Đồng</div>
+                        <div class="card-tag-row">
+                            <span class="card-tag tag-blue">ZALO GROUP</span>
+                        </div>
+                        <div class="card-desc">Tham gia box chat Zalo kết nối anh em game thủ</div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-action btn-icon-only" onclick="copyToClipboard('https://zalo.me/g/xkuwhq836', 'Đã sao chép link Zalo!')">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                    <a href="https://zalo.me/g/xkuwhq836" target="_blank" class="btn-action">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2026 KENMODGAME. Tất cả quyền được bảo lưu.
+        </div>
+
+    </div>
+
+    <!-- Toast Component -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-circle-check" style="color: #34d399;"></i>
+        <span id="toastMessage">Đã sao chép liên kết!</span>
+    </div>
+
+    <!-- Audio Player Element -->
+    <audio id="bgMusic" src="https://files.catbox.moe/d57e8p.m4a" loop preload="auto"></audio>
+
+    <!-- JavaScript logic -->
+    <script>
+        function copyToClipboard(text, message) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(message || 'Đã sao chép liên kết!');
+            }).catch(err => {
+                console.error('Không thể sao chép: ', err);
+            });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            
+            toastMessage.textContent = msg;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        // Live Search Filtering
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.item-card');
+
+            cards.forEach(card => {
+                const searchData = card.getAttribute('data-title').toLowerCase();
+                if (searchData.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Background Music Auto-Play Logic
+        const bgMusic = document.getElementById('bgMusic');
+
+        function playAudio() {
+            bgMusic.play().then(() => {
+                document.removeEventListener('click', playAudio);
+                document.removeEventListener('touchstart', playAudio);
+                document.removeEventListener('keydown', playAudio);
+            }).catch(error => {
+                console.log("Trình duyệt chặn phát âm thanh tự động:", error);
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            bgMusic.play().catch(() => {
+                document.addEventListener('click', playAudio);
+                document.addEventListener('touchstart', playAudio);
+                document.addEventListener('keydown', playAudio);
+            });
+            createSnowflakes();
+        });
+
+        // Hiệu ứng tạo tuyết rơi động
+        function createSnowflakes() {
+            const container = document.getElementById('snowflakeContainer');
+            if (!container) return;
+
+            const flakeCount = 35;
+            const flakeIcons = ['❄', '❅', '❆', '•'];
+
+            for (let i = 0; i < flakeCount; i++) {
+                const flake = document.createElement('div');
+                flake.className = 'snowflake';
+                flake.innerHTML = flakeIcons[Math.floor(Math.random() * flakeIcons.length)];
+                
+                const size = Math.random() * 12 + 8;
+                const left = Math.random() * 100;
+                const duration = Math.random() * 7 + 5;
+                const delay = Math.random() * 5;
+                const opacity = Math.random() * 0.7 + 0.3;
+
+                flake.style.fontSize = `${size}px`;
+                flake.style.left = `${left}%`;
+                flake.style.animationDuration = `${duration}s, 3s`;
+                flake.style.animationDelay = `${delay}s, ${delay}s`;
+                flake.style.opacity = opacity;
+
+                container.appendChild(flake);
+            }
+        }
+    </script>
+</body>
+</html>
